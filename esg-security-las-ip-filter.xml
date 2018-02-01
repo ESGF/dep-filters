@@ -1,0 +1,17 @@
+  <!-- ******************************** -->
+  <!-- web.xml entry for the esg node   -->
+  <!-- Access Control Filter chain      -->
+  <!-- ******************************** -->
+  <!-- bypass authentication/authorization for requests coming from LAS -->
+  <filter>
+    <filter-name>ipFilter</filter-name>
+    <filter-class>esg.orp.app.AuthenticationByIPFilter</filter-class>
+    <init-param>
+      <param-name>ip_whitelist</param-name>
+      <param-value>/esg/content/las/conf/server/las_servers.xml, /esg/content/las/conf/server/las_servers_static.xml</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>ipFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
