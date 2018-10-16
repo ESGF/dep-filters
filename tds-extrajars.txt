@@ -8,4 +8,4 @@ opensaml-2.6.6.jar
 openws-1.5.6.jar
 slf4j-api-1.7.6.jar
 xmlsec-1.5.7.jar
-xmltooling-1.4.4.jar
+xmltooling-1.4.6.jar
